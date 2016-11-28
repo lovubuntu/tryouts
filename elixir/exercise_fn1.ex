@@ -5,7 +5,7 @@ concatenated_list = list_concat.([1,2,4,5],[345,23,2])
 IO.puts(concatenated_list)
 
 # Sum a list of values
-sum_three_nos = fn(a,b,c) -> a + b + case end
+sum_three_nos = fn(a,b,c) -> a + b + c end
 
 sum = sum_three_nos.(1,6,345)
 IO.puts(sum)
