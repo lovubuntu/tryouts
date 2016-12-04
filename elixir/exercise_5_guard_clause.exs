@@ -18,10 +18,19 @@ defmodule Formatter do
   def round(x) when is_float(x) do
     IO.puts("#{x} when rounded to float will give #{Float.round(x)}")
   end
-  def round(x) when is_number(x) do
+  def round(x) when is_integer(x) do
     IO.puts "#{x} when rounded to int... wait... what is the point of rounding an int?"
   end
 end
 
 Formatter.round(123.456)
 Formatter.round(1234)
+
+defmodule FactorialUpgraded do
+  def of(0), do: 1
+  def of(n) when n > 0, do: n*of(n-1)
+end
+
+IO.puts FactorialUpgraded.of(12)
+IO.puts FactorialUpgraded.of(0)
+IO.puts FactorialUpgraded.of(-12)
