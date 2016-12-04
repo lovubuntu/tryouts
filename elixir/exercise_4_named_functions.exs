@@ -31,3 +31,11 @@ defmodule SumOfNumbers do
 end
 
 IO.puts "Sum of numbers upto 42 is #{SumOfNumbers.upto(42)}"
+
+defmodule Algebra do
+  def gcd(x, 0), do: x
+  def gcd(x, y), do: gcd(y, rem(x, y))
+end
+
+IO.puts "The gcd value of 24,12 is #{Algebra.gcd(24,12)}"
+IO.puts "The gcd value of 24,5 is #{Algebra.gcd(24,5)}"
