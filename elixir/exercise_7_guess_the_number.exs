@@ -18,11 +18,11 @@ defmodule Magician do
   def check_number(actual, guess, _) when actual == guess, do: IO.puts actual
   def check_number(actual, guess, start..finish) when guess > actual do
     IO.puts "Is it #{guess}"
-    check_number(actual, mid_of_range(start..finish), start..guess-1)
+    guess(actual, start..guess-1)
   end
   def check_number(actual, guess, start..finish) when guess < actual do
     IO.puts "closer to #{guess}?"
-    check_number(actual, mid_of_range(start..finish), guess+1..finish)
+    guess(actual, guess+1..finish)
   end
   def mid_of_range(a..b), do: div(a+b,2)
 end
